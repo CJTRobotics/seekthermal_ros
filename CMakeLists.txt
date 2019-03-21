@@ -9,7 +9,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
-  genmsg
+  message_generation
   image_transport
   cv_bridge
   sensor_msgs
@@ -57,7 +57,7 @@ find_package(Boost REQUIRED)
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES thermal_hotspot_inspection
-  CATKIN_DEPENDS roscpp std_msgs genmsg image_transport cv_bridge sensor_msgs camera_info_manager image_geometry
+  CATKIN_DEPENDS roscpp std_msgs message_runtime image_transport cv_bridge sensor_msgs camera_info_manager image_geometry
 #  DEPENDS system_libs
   CATKIN_DEPENDS message_runtime
 )
