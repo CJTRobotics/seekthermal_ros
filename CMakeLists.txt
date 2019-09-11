@@ -82,7 +82,7 @@ add_library(seekthermal_ros
 
 target_link_libraries(seekthermal_ros
   ${catkin_LIBRARIES}
-  ${OpenCV_LIBS}
+  ${OpenCV_LIBRARIES}
   ${SEEKTHERMAL_LIBRARIES}
   ${Boost_LIBRARIES}
 )
@@ -97,6 +97,8 @@ add_executable(seekthermal_ros_node src/seekthermal_ros_node.cpp)
 target_link_libraries(seekthermal_ros_node
   seekthermal_ros
   ${catkin_LIBRARIES}
-  ${OpenCV_LIBS}
+  ${OpenCV_LIBRARIES}
+  ${SEEKTHERMAL_LIBRARIES}
+  ${Boost_LIBRARIES}
 )
 
